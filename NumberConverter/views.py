@@ -14,7 +14,7 @@ def result(request):
         decimal = int(djtext, 2)
         octal = oct(decimal)
         hexa = hex(decimal)
-        params = {'type1' : 'Decimal','value1':decimal,'type2':'Octal','value2':octal,'type3':'Hexa Decimal','value3':hexa}
+        params = {'type1' : 'Decimal','value1':decimal,'type2':'Octal (octal code:0o)','value2':octal,'type3':'Hexa Decimal(hexa decimal code:0x)','value3':hexa}
         return render(request, 'result.html', params)
     elif selecttype == 'octal' and djtext != '':
         decimal = str(int(djtext, 8))
